@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Any suggestions, comments, or questions are greatly appreciated!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactTV"
+        android:textSize="24sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp" />
+
+
+    <TextView
+        android:text="TJtheJuggler@gmail.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactEmailTV"
+        android:textSize="24sp"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_formic"
+        android:id="@+id/imageView6"
+        android:layout_below="@+id/contactTV"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="BTC:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactBtcTV"
+        android:textSize="24sp"
+        android:layout_below="@+id/contactEmailTV"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!--this was the text below here: android:text="17xZyfxHvzZKH4sx5gVDFVfVhNQV5KyLeq"-->
+    <TextView
+
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactBtcAddressTV"
+        android:textSize="24sp"
+        android:layout_below="@+id/contactBtcTV"
+        android:layout_alignLeft="@+id/contactBtcTV"
+        android:layout_alignStart="@+id/contactBtcTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

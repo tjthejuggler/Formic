@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <TextView
+        android:text="Name:(required)"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxNameTV"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/newAddPatInputDialogBoxName"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""/>
+    <TextView
+        android:text="Object types:(required)"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxTypeTV"
+        android:textSize="30sp"/>
+    <MultiAutoCompleteTextView
+        android:text=""
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxType"
+        android:dropDownHeight="170dp"/>
+    <TextView
+        android:text="Number of props:"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxNumTV"
+        android:textSize="30sp"/>
+    <Spinner
+        android:id="@+id/newAddPatInputDialogBoxNum"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    <TextView
+        android:text="Description:"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxDescriptionTV"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/newAddPatInputDialogBoxDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""/>
+    <TextView
+        android:text="Siteswap:"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxSiteswapTV"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/newAddPatInputDialogBoxSiteswap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""/>
+     <TextView
+        android:text="Link:"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddPatInputDialogBoxLinkTV"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/newAddPatInputDialogBoxLink"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

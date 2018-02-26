@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="These are the randomizer settings!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/randomizerSettingsTV"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="50dp" />
+
+        <CheckBox
+            android:text="Choose random number of objects"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/randSetObjNum" />
+
+        <CheckBox
+            android:text="Choose random prop type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/randSetPropType" />
+
+        <CheckBox
+            android:text="Patterns with history allowed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/randSetWithHist"
+            android:checked="true" />
+
+        <CheckBox
+            android:text="Patterns without history allowed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/randSetWithoutHist"
+            android:checked="true" />
+
+
+    </LinearLayout>
+</ScrollView>

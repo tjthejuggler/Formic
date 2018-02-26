@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/introDialogTV"
+        android:textSize="16sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="50dp" />
+
+    <CheckBox
+        android:text="Show this window when app starts."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/introDialogShowAutomaticallyCheckBox"
+        android:layout_marginLeft="28dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/introDialogTV"/>
+        <Button
+            android:text="Add Siteswaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/introDialogShowAutomaticallyCheckBox"
+            android:layout_marginLeft="28dp"
+            android:textSize="14sp"
+            android:id="@+id/introDialogAddSiteswaps" />
+        <TextView
+            android:text="This may take several minutes."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/takeSeveralMinutes"
+            android:textSize="16sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/introDialogAddSiteswaps"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="50dp" />
+    </LinearLayout>
+</ScrollView>

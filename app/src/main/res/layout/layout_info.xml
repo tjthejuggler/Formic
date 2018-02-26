@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#705808"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+        android:text="Delete Pat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addPatternHeader"
+        android:id="@+id/addPatDeleteBut" />
+
+        <Button
+            android:text="New Pat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPatNewBut"
+            android:layout_below="@+id/addPatternHeader"
+            android:layout_toRightOf="@+id/addPatDeleteBut"
+            android:layout_toEndOf="@+id/addPatDeleteBut" />
+
+        <TextView
+        android:text="(name)(num)(type)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addPatEntryName"
+        android:layout_below="@+id/addPatDeleteBut"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp" />
+
+        <TextView
+            android:text="Link:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPatLinkLabel"
+            android:layout_below="@+id/addPatSiteswapLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp" />
+
+
+        <TextView
+        android:text="Notes:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addPatDescriptionLabel"
+        android:textSize="30sp"
+        android:layout_below="@+id/addPatEntryName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+        <TextView
+            android:text="Siteswap:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPatSiteswapLabel"
+            android:textSize="30sp"
+            android:layout_below="@+id/inoPatDescriptionEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/addPatSiteswapEditText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:nestedScrollingEnabled="true"
+            android:textSize="30sp"
+            android:layout_alignBaseline="@+id/addPatSiteswapLabel"
+            android:layout_alignBottom="@+id/addPatSiteswapLabel"
+            android:layout_toRightOf="@+id/addPatSiteswapLabel"
+            android:layout_toEndOf="@+id/addPatSiteswapLabel" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="20"
+            android:maxLength="10000"
+            android:scrollHorizontally="false"
+            android:ems="10"
+            android:id="@+id/inoPatDescriptionEditText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:singleLine="false"
+            android:nestedScrollingEnabled="true"
+            android:textSize="30sp"
+            android:layout_below="@+id/addPatDescriptionLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-7dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="20"
+            android:maxLength="10000"
+            android:scrollHorizontally="false"
+            android:text="popooo"
+            android:ems="10"
+            android:id="@+id/inoModifierDescriptionEditText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:singleLine="false"
+            android:nestedScrollingEnabled="true"
+            android:textSize="30sp"
+            android:layout_below="@+id/addModifierDescriptionLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-7dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/addPatLinkEditText"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:singleLine="false"
+            android:nestedScrollingEnabled="true"
+            android:textSize="30sp"
+            android:layout_below="@+id/addPatLinkLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="________________________________________"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/addLineBetweenPatAndModifier"
+            android:textSize="30sp"
+            android:layout_below="@+id/addPatLinkLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="26dp"
+            android:layout_alignBottom="@+id/addPatLinkEditText" />
+
+
+
+
+
+        <Button
+            android:text="New Modifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addModifierNewBut"
+            android:layout_below="@+id/addModifiersHeader"
+            android:layout_toRightOf="@+id/addModifierDeleteBut"
+            android:layout_toEndOf="@+id/addModifierDeleteBut" />
+
+        <Button
+            android:text="Delete Modifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addModifiersHeader"
+            android:id="@+id/addModifierDeleteBut" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addModifierNameSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/addModifierDeleteBut" />
+
+        <TextView
+            android:text="Notes:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addModifierDescriptionLabel"
+            android:textSize="30sp"
+            android:layout_below="@+id/addModifierNameSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="Bulk SS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addBulkSiteswapBut"
+            android:layout_below="@+id/addPatternHeader"
+            android:layout_toRightOf="@+id/addPatNewBut"
+            android:layout_toEndOf="@+id/addPatNewBut" />
+
+        <Button
+            android:text="go"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addPatLinkEditText"
+            android:id="@+id/addLinkGoButton"
+            android:layout_toLeftOf="@+id/addPatSiteswapEditText"
+            android:layout_toRightOf="@+id/addPatLinkLabel"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/addPatSiteswapLabel" />
+
+        <TextView
+            android:text="PATTERN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPatternHeader"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="MODIFIERS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addModifiersHeader"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            android:layout_below="@+id/addLineBetweenPatAndModifier"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</ScrollView>

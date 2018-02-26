@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="What were you thinking about when you messed up?"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/lastThoughtBeforeUnintentionalEndTV"
+        android:textSize="30sp"/>
+    <AutoCompleteTextView
+        android:text=""
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/lastThoughtBeforeUnintentionalEndATV"
+        android:dropDownHeight="170dp"/>
+
+
+
+
+</LinearLayout>

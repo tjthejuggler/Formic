@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14104E">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <Button
+        android:text="Begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/runTimerBeginButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/runTypeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_below="@+id/runEntryName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+    <RadioButton
+        android:text="Endurance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:id="@+id/runRadButEndurance"
+        android:textSize="30sp" />
+
+        <RadioButton
+            android:text="Drill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/runRadButDrill"
+            android:textSize="30sp"
+            android:checked="false" />
+</RadioGroup>
+
+    <com.example.malabarista.formic.NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:id="@+id/runDrillNumberPickerHours"
+        android:fadingEdgeLength="50dp"
+        android:layout_below="@+id/runTypeRadioGroup"
+        android:layout_alignLeft="@+id/runTypeRadioGroup"
+        android:layout_alignStart="@+id/runTypeRadioGroup"
+        android:layout_marginTop="30dp"
+        android:clickable="false" />
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runColonLabel1"
+        android:layout_toRightOf="@+id/runDrillNumberPickerHours"
+        android:layout_toEndOf="@+id/runDrillNumberPickerHours"
+        android:layout_marginTop="246dp"
+        android:textSize="40sp" />
+
+    <com.example.malabarista.formic.NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runDrillNumberPickerMinutes"
+        android:layout_alignBaseline="@+id/runDrillNumberPickerHours"
+        android:layout_alignBottom="@+id/runDrillNumberPickerHours"
+        android:layout_toRightOf="@+id/runColonLabel1"
+        android:layout_toEndOf="@+id/runColonLabel1" />
+
+    <TextView
+        android:text=":"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runColonLabel2"
+        android:layout_toRightOf="@+id/runDrillNumberPickerMinutes"
+        android:layout_toEndOf="@+id/runDrillNumberPickerMinutes"
+        android:textSize="40sp"
+        android:layout_marginTop="246dp" />
+
+    <TextView
+        android:text="  Hours        Minutes    Seconds            Sets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runsNumOfSetsLabel"
+        android:textSize="14sp"
+        android:layout_below="@+id/runTypeRadioGroup"
+        android:layout_alignLeft="@+id/runTypeRadioGroup"
+        android:layout_alignStart="@+id/runTypeRadioGroup"
+        android:layout_marginTop="10dp" />
+
+    <com.example.malabarista.formic.NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runDrillNumberPickerSeconds"
+        android:layout_alignBaseline="@+id/runDrillNumberPickerMinutes"
+        android:layout_alignBottom="@+id/runDrillNumberPickerMinutes"
+        android:layout_toRightOf="@+id/runColonLabel2"
+        android:layout_toEndOf="@+id/runColonLabel2" />
+
+    <com.example.malabarista.formic.NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runDrillNumberPickerSets"
+        android:layout_alignBaseline="@+id/runDrillNumberPickerSeconds"
+        android:layout_alignBottom="@+id/runDrillNumberPickerSeconds"
+        android:layout_toRightOf="@+id/runDrillNumberPickerSeconds"
+        android:layout_toEndOf="@+id/runDrillNumberPickerSeconds"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp" />
+
+    <CheckBox
+        android:text="Restart set on drops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:id="@+id/runDrillRestartSetCheckBox"
+        android:layout_below="@+id/runDrillNumberPickerHours"
+        android:layout_alignLeft="@+id/runDrillNumberPickerHours"
+        android:layout_alignStart="@+id/runDrillNumberPickerHours" />
+
+    <TextView
+        android:text="(name)(num)(type)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runEntryName"
+        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/runTimerBeginButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"/>
+        <TextView
+            android:text="______________________"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textSize="30sp"
+            android:id="@+id/runSessionDateAndTimeDivider"
+            android:layout_below="@+id/runDrillRestartSetCheckBox"/>
+    <TextView
+        android:text="runSessionDateAndTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="30sp"
+        android:id="@+id/runSessionDateAndTimeTextView"
+        android:layout_below="@+id/runSessionDateAndTimeDivider"
+        android:layout_alignLeft="@+id/runDrillRestartSetCheckBox"
+        android:layout_alignStart="@+id/runDrillRestartSetCheckBox" />
+
+    <Button
+        android:text="Notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/runSessionNoteButton"
+        android:layout_alignLeft="@+id/runSessionDateAndTimeTextView"
+        android:layout_alignStart="@+id/runSessionDateAndTimeTextView"
+        android:layout_below="@+id/runSessionDateAndTimeTextView" />
+        <Button
+            android:text="End session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/runSessionCloseButton"
+            android:layout_below="@+id/runSessionDateAndTimeTextView"
+            android:layout_toRightOf="@+id/runSessionNoteButton"/>
+
+        <CheckBox
+            android:text="Use headphone button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/runDrillRestartSetCheckBox"
+            android:layout_alignLeft="@+id/runDrillRestartSetCheckBox"
+            android:layout_alignStart="@+id/runDrillRestartSetCheckBox"
+            android:id="@+id/runHeadphoneCheckBox" />
+    </RelativeLayout>
+</ScrollView>

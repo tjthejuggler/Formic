@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Object types:"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddBulkSiteswapInputDialogBoxTypeTV"
+        android:textSize="30sp"/>
+    <MultiAutoCompleteTextView
+        android:text=""
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddBulkSiteswapInputDialogBoxType"
+        android:dropDownHeight="170dp"/>
+    <TextView
+        android:text="Siteswap list:"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/newAddBulkSiteswapInputDialogBoxNameTV"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/newAddBulkSiteswapInputDialogBoxName"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""/>
+    //      -CURRENT STREAK OF CONSECUTIVE DAYS DOING.../LONGEST STREAK OF CONSECUTIVE DAYS DOING...:
+
+    //               -..a drill run
+    //               -  ..restart on drops
+    //               -    ..that was dropless
+    //               -  ..don't restart on drops
+    //               -  ..that was an initial run
+
+
+</LinearLayout>
+

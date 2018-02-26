@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Why did you decide to stop?"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/reasonForIntentionalEndTV"
+        android:textSize="30sp"/>
+    <AutoCompleteTextView
+        android:text=""
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/reasonForIntentionalEndATV"
+        android:dropDownHeight="170dp"/>
+
+
+
+
+</LinearLayout>

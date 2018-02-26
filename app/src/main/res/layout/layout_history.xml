@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#065122">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:text=" "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:id="@+id/histSpacer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:text="           (show filter)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histFilterExpandCollapseTextView"
+            android:textSize="24sp"
+            android:layout_below="@+id/histSpacer"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <CheckBox
+            android:text="Main Inputs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histMainInputsCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histFilterExpandCollapseTextView"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+        <CheckBox
+        android:text="Object types other than ''"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/histObjectTypesOtherThanCurrentCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/histMainInputsCheckbox"
+            android:layout_marginLeft="30dp"
+        android:visibility="gone" />
+        
+        <CheckBox
+        android:text="Number of objects other than ''"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/histNumberOfObjectsOtherThanCurrentCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/histObjectTypesOtherThanCurrentCheckbox"
+            android:layout_marginLeft="30dp"
+        android:visibility="gone" />        
+        
+        <CheckBox
+        android:text="Pattern names other than ''"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/histPatternNamesOtherThanCurrentCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/histNumberOfObjectsOtherThanCurrentCheckbox"
+            android:layout_marginLeft="30dp"
+        android:visibility="gone" />        
+        
+        <CheckBox
+        android:text="Modifier combination other than exactly ''"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/histModifierCombinationOtherThanExactlyCurrentCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/histPatternNamesOtherThanCurrentCheckbox"
+            android:layout_marginLeft="30dp"
+        android:visibility="gone" />
+
+        <CheckBox
+        android:text="Modifier combination that doesn't contain ''"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/histModifierCombinationThatDoesntContainCurrentCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/histModifierCombinationOtherThanExactlyCurrentCheckbox"
+            android:layout_marginLeft="30dp"
+        android:visibility="gone" />
+        
+        <CheckBox
+        android:text="Runs not in this session:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/histRunsNotInThisSessionCheckbox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+            android:textSize="22sp"
+            android:layout_below="@+id/histModifierCombinationThatDoesntContainCurrentCheckbox"
+        android:visibility="gone" />
+
+        <Spinner
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlack"
+            android:textSize="18sp"
+            android:id="@+id/histSessionDateAndTimesSpinner"
+            android:scrollbarSize="60dp"
+            android:layout_below="@+id/histRunsNotInThisSessionCheckbox"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:text="Endurance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histEnduranceCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histSessionDateAndTimesSpinner"
+            android:textSize="30sp"
+            android:visibility="gone" />        
+        
+        <CheckBox
+            android:text="Ended intentionally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histIntentionalEndCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histEnduranceCheckbox"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone" />   
+        
+        <CheckBox
+            android:text="Ended unintentionally"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histUnintentionalEndCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histIntentionalEndCheckbox"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:text="Personal best broken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histEndurancePersonalBestCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histUnintentionalEndCheckbox"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:text="Personal best not broken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histEnduranceNotPersonalBestCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histEndurancePersonalBestCheckbox"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone" />
+        
+        <CheckBox
+            android:text="Drill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histDrillCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histEnduranceNotPersonalBestCheckbox"
+            android:textSize="30sp"
+            android:visibility="gone" />        
+        
+        <CheckBox
+            android:text="'Restart set on drops' mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histRestartSetCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histDrillCheckbox"
+            android:layout_marginLeft="30dp"
+            android:textSize="22sp"
+            android:visibility="gone" />        
+        
+        <CheckBox
+            android:text="Dropless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histRestartSetDroplessCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histRestartSetCheckbox"
+            android:layout_marginLeft="60dp"
+            android:visibility="gone" />        
+        
+        <CheckBox
+            android:text="Not dropless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histRestartSetNotDroplessCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histRestartSetDroplessCheckbox"
+            android:layout_marginLeft="60dp"
+            android:visibility="gone" />        
+        
+        <CheckBox
+            android:text="'Don't restart set on drops' mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histDontRestartCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histRestartSetNotDroplessCheckbox"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone" />       
+        
+        <CheckBox
+            android:text="Initial runs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histInitialRunCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histDontRestartCheckbox"
+            android:visibility="gone" /> 
+        
+        <CheckBox
+            android:text="Non-initial runs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histNonInitialRunCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/histInitialRunCheckbox"
+            android:visibility="gone" />        
+        
+
+
+        <!--<RadioGroup-->
+        <!--android:orientation="horizontal"-->
+        <!--android:id="@+id/histTypeRadioGroup"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="14dp"-->
+        <!--android:layout_marginStart="14dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true">-->
+        <!--<RadioButton-->
+            <!--android:text="Pat"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:id="@+id/histRadButPattern"-->
+            <!--android:textSize="30sp" />-->
+
+            <!--<RadioButton-->
+            <!--android:text="Type"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:id="@+id/histRadButType"-->
+                <!--android:textSize="30sp"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginStart="12dp" />-->
+
+
+        <!--<RadioButton-->
+            <!--android:text="Ses"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:id="@+id/histRadButSession"-->
+            <!--android:textSize="30sp"-->
+            <!--android:checked="false"-->
+            <!--android:layout_alignBaseline="@+id/histRadButPattern"-->
+            <!--android:layout_alignBottom="@+id/histRadButPattern"-->
+            <!--android:layout_toRightOf="@+id/histRadButPattern"-->
+            <!--android:layout_toEndOf="@+id/histRadButPattern" />-->
+    <!--</RadioGroup>-->
+
+
+        <Button
+            android:text="Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/histNonInitialRunCheckbox"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"
+            android:id="@+id/historyEditButton" />
+
+        <Button
+            android:text="Notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/histNonInitialRunCheckbox"
+            android:layout_toEndOf="@+id/historyEditButton"
+            android:layout_toRightOf="@+id/historyEditButton"
+            android:id="@+id/historySessionNotesButton" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dip"
+            android:layout_weight="1"
+            android:background="#FF909090"
+            android:id="@+id/historSeperatorLine"
+            android:layout_below="@+id/historySessionNotesButton"
+            android:padding="2dip" />
+
+        <TextView
+            android:text="histRecordsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/histRecordsTextView"
+            android:textSize="30sp"
+            android:layout_below="@+id/historSeperatorLine"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <!--<TextView-->
+            <!--android:text="histSessionRecordsTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/histSessionRecordsTextView"-->
+            <!--android:textSize="30sp"-->
+            <!--android:layout_below="@+id/historySessionNotesButton"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
+        <!--<RadioGroup-->
+        <!--android:orientation="horizontal"-->
+        <!--android:id="@+id/histPatternTypeRadioGroup"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="14dp"-->
+        <!--android:layout_marginStart="14dp"-->
+        <!--android:layout_below="@+id/histTypeRadioGroup">-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true">-->
+        <!--<RadioButton-->
+            <!--android:text="Endurance"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:id="@+id/histRadButEndurance"-->
+            <!--android:textSize="30sp" />-->
+
+        <!--<RadioButton-->
+            <!--android:text="Drill"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:id="@+id/histRadButDrill"-->
+            <!--android:textSize="30sp"-->
+            <!--android:checked="false"-->
+            <!--android:layout_alignBaseline="@+id/histRadButEndurance"-->
+            <!--android:layout_alignBottom="@+id/histRadButEndurance"-->
+            <!--android:layout_toRightOf="@+id/histRadButEndurance"-->
+            <!--android:layout_toEndOf="@+id/histRadButEndurance" />-->
+    <!--</RadioGroup>-->
+
+        <!--<RadioGroup-->
+            <!--android:orientation="horizontal"-->
+            <!--android:id="@+id/histCatchDropBothRadioGroup"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="14dp"-->
+            <!--android:layout_marginStart="14dp"-->
+            <!--android:layout_below="@+id/histDrillRestartSetOnDrops">-->
+
+            <!--<RadioButton-->
+                <!--android:text="Catch"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:id="@+id/histRadButCatch"-->
+                <!--android:textSize="30sp" />-->
+
+            <!--<RadioButton-->
+            <!--android:text="Drop"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_marginStart="12dp"-->
+            <!--android:layout_marginTop="6dp"-->
+            <!--android:id="@+id/histRadButDrop"-->
+            <!--android:textSize="30sp" />-->
+
+            <!--<RadioButton-->
+                <!--android:text="Both"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="12dp"-->
+                <!--android:layout_marginStart="12dp"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:id="@+id/histRadButBoth"-->
+                <!--android:textSize="30sp"-->
+ <!--/>-->
+
+        <!--</RadioGroup>-->
+
+
+        <!--<CheckBox-->
+            <!--android:text="'Restart set on drops' runs"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/histDrillRestartSetOnDrops"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_below="@+id/histPatternTypeRadioGroup"-->
+            <!--android:visibility="gone" />-->
+
+
+
+
+    </RelativeLayout>
+</ScrollView>

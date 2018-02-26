@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.malabarista.formic.MainActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp">
+
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/layout1"
+                    layout="@layout/layout_run"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></include>
+
+                <include
+                    android:id="@+id/layout2"
+                    layout="@layout/layout_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></include>
+
+                <include
+                    android:id="@+id/layout3"
+                    layout="@layout/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></include>
+
+                <include
+                    android:id="@+id/layout4"
+                    layout="@layout/layout_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></include>
+
+
+
+                <include
+                    android:id="@+id/layout5"
+                    layout="@layout/layout_stats"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></include>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <MultiAutoCompleteTextView
+        android:text=""
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modifierMATV"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:layout_toLeftOf="@+id/mainModifiersWithPastButton"
+        android:layout_toStartOf="@+id/mainModifiersWithPastButton" />
+
+    <AutoCompleteTextView
+        android:text=""
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="1dp"
+        android:id="@+id/patternATV"
+        android:layout_toLeftOf="@+id/numberOfObjectsSpinner"
+        android:layout_toStartOf="@+id/numberOfObjectsSpinner" />
+
+    <Spinner
+
+        android:layout_height="wrap_content"
+        android:id="@+id/numberOfObjectsSpinner"
+        android:scrollbarSize="120dp"
+        android:dropDownWidth="100dp"
+        style="@style/Platform.Widget.AppCompat.Spinner"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/objectTypeSpinner"
+        android:layout_toStartOf="@+id/objectTypeSpinner"
+        android:layout_alignBottom="@+id/patternATV"
+        android:layout_width="75dp" />
+
+    <Spinner
+        android:layout_height="wrap_content"
+        android:id="@+id/objectTypeSpinner"
+        style="@style/Platform.Widget.AppCompat.Spinner"
+        android:layout_alignBottom="@+id/numberOfObjectsSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/patternATV"
+        android:layout_width="110dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/objectTypeSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/mainModifiersWithPastButton"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:maxHeight="35dip"
+        android:minHeight="35dip"
+        android:maxWidth="35dip"
+        android:minWidth="35dip" />
+
+</RelativeLayout>
